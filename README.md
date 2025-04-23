@@ -2,16 +2,7 @@
 
 <div align="center">
   <strong>Make a cheap but powerful USB Rubber Ducky with a Raspberry Pi Pico</strong>
-</div>
-
-<br />
-
-<div align="center">
-  <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/dbisu/pico-ducky">
-  <img alt="GitHub license" src="https://img.shields.io/github/license/dbisu/pico-ducky">
-  <a href="https://github.com/dbisu/pico-ducky/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/dbisu/pico-ducky"></a>
-  <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/dbisu/pico-ducky">
-  <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/dbisu/pico-ducky">
+  <strong>Based on dbisu</strong>
 </div>
 
 <br />
@@ -19,7 +10,7 @@
 ## Quick Start Guide
 Install and have your USB Rubber Ducky working in less than 5 minutes.
 
-1. Download the latest release from the [Releases](https://github.com/dbisu/pico-ducky/releases) page.
+1. Download the latest release from the [Releases](https://github.com/AKrawczyk/pico-ducky/releases) page.
 
 2. Plug the device into a USB port while holding the boot button. It will show up as a removable media device named RPI-RP2.
 
@@ -123,15 +114,11 @@ The following endpoints are available on the webservice:
 ```
 /
 /new
-/ducky
+/view/<filename>
 /edit/<filename>
 /write/<filename>
 /run/<filename>
-```
-
-API endpoints
-```
-/api/run/<filenumber>
+/api
 ```
 
 ## Setup mode
