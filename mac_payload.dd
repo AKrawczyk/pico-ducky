@@ -8,4 +8,4 @@ ENTER
 DELAY 2000
 COMMAND n
 DELAY 2000
-STRING Hello, World! No echo o o o o 4
+STRING Hello, World! No echo o o o o o
