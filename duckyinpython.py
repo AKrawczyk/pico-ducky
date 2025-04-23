@@ -5,6 +5,10 @@
 #  TODO: ADD support for the following:
 # Add jitter
 # Add LED functionality
+#
+# Modified: Aaron Krawczyk ()
+# Assistance: Cursor and Claud AI
+# April 2025
 
 import re
 import time
@@ -484,6 +488,32 @@ def runScript(file):
                     time.sleep(float(defaultDelay) / 1000)
     except OSError as e:
         print("Unable to open file", file)
+
+# Modification AK
+def exe(Payload_Script):
+    global defaultDelay
+
+    restart = True
+    duckyScript = Payload_Script
+    while restart:
+        restart = False
+        previousLine = ""
+        for line in duckyScript:
+            if(line[0:6] == "REPEAT"):
+                for i in range(int(line[7:])):
+                    #repeat the last command
+                    parseLine(previousLine, duckyScript)
+                    time.sleep(float(defaultDelay) / 1000)
+            elif line.startswith("RESTART_PAYLOAD"):
+                restart = True
+                break
+            elif line.startswith("STOP_PAYLOAD"):
+                restart = False
+                break
+            else:
+                parseLine(line, duckyScript)
+                previousLine = line
+            time.sleep(float(defaultDelay) / 1000)
 
 def selectPayload():
     global payload1Pin, payload2Pin, payload3Pin, payload4Pin

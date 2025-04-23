@@ -1,0 +1,11 @@
+REM This script activates Siri and tells it to shuffle music
+DELAY 1000
+GUI SPACE
+DELAY 500
+STRING Siri
+DELAY 500
+ENTER
+DELAY 1000
+STRING shuffle 90s alternative play list
+DELAY 500
+ENTER
